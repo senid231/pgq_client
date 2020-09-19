@@ -1,0 +1,7 @@
+adapter: "postgresql"
+encoding: "unicode"
+database: "pgq_client_test"
+username: "postgres"
+password: "password"
+host: "postgres"
+port: 5432

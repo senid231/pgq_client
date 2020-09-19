@@ -3,4 +3,18 @@ language: ruby
 cache: bundler
 rvm:
   - 2.7.1
-before_install: gem install bundler -v 2.2.0.rc.1
+addons:
+  postgresql: "11"
+  apt:
+    packages:
+      - postgresql-11
+      - postgresql-client-11
+      - postgresql-11-pgq3
+env:
+  global:
+    - PGPORT=5433
+before_install:
+  - sudo dpkg -i vendor/postgresql-11-pgq-ext_3.1-1p1_all.deb
+  - gem install bundler -v 2.2.0.rc.1
+  - cp -v spec/database.ci.yml spec/database.yml
+  - psql -c 'create database pgq_client_test;' -U postgres

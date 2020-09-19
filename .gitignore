@@ -1,8 +1,10 @@
 /.bundle/
 /pkg/
-/spec/reports/
 /tmp/
 /Gemfile.lock
 
 # rspec failure tracking
+/spec/reports/
 .rspec_status
+/spec/test.log
+/spec/database.yml

@@ -52,7 +52,7 @@ Lint/IdentityComparison: # (new in 0.91)
   Enabled: true
 
 Lint/MissingSuper: # (new in 0.89)
-  Enabled: true
+  Enabled: false
 
 Lint/MixedRegexpCaptureTypes: # (new in 0.85)
   Enabled: true
@@ -158,3 +158,22 @@ Style/SoleNestedConditional: # (new in 0.89)
 
 Style/StringConcatenation: # (new in 0.89)
   Enabled: true
+
+Style/BlockDelimiters:
+  Exclude:
+    - spec/**/*
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Layout/FirstArgumentIndentation:
+  EnforcedStyle: consistent_relative_to_receiver
+
+Metrics/BlockLength:
+  Enabled: false
+
+Naming/PredicateName:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
